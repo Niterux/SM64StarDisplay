@@ -211,10 +211,10 @@ namespace StarDisplay
             }
         }
 
-        public override void InvalidateCache()
+        public void InvalidateCache(bool RemoveHighlight = true)
         {
             base.InvalidateCache();
-            IsFirstCall = true;
+            IsFirstCall = RemoveHighlight;
         }
 
         public void SetBackground(Image image, float opacity)

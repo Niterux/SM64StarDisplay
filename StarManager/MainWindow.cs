@@ -143,7 +143,7 @@ namespace StarDisplay
                     if (layoutOff < ld.GetLength() - sm.GetConfig("StarLayoutInitAction_limit", 30))
                        layoutOff++;
                 }
-                gm.InvalidateCache();
+                gm.InvalidateCache(false);
                 //Do you scroll processing
             }
         }
@@ -1308,7 +1308,7 @@ namespace StarDisplay
             if (gm != null)
             {
                 gm.Width = Width;
-                gm.InvalidateCache();
+                gm.InvalidateCache(false);
             }
 		}
 	
